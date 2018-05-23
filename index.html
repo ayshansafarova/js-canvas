@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<canvas id="canvas" width="600" height="300">
+		Hi
+	</canvas>
+</body>
+<script>
+
+var o = document.getElementById("canvas");
+var context = o.getContext("2d");
+context.beginPath();
+// A 
+context.moveTo(100, 100); //moves path to the start point without drawing line
+context.lineTo(150, 200); //to these points, creates line without drawing
+context.moveTo(100, 100);
+context.lineTo(50, 200);
+context.moveTo(75, 150);
+context.lineTo(125, 150); // from (75, 150) to (125, 150) middle line draw
+
+// Y 
+context.moveTo(125, 100);
+context.lineTo(175, 150); //1 arm
+context.lineTo(225, 100); //second arm
+context.moveTo(175, 150);
+context.lineTo(175, 200);
+
+//ş
+context.moveTo(320, 100); //top line
+context.lineTo(250, 100);
+context.lineTo(250, 150);
+context.lineTo(320, 150);
+context.lineTo(320, 200);
+context.lineTo(250, 200); //bottom line
+context.moveTo(285, 190); 
+context.lineTo(285, 210); //middle little line of bottom line
+
+//Ə
+context.moveTo(345, 100);
+context.lineTo(415, 100);
+context.lineTo(415, 200);
+context.lineTo(345, 200);
+context.lineTo(345, 150);
+context.lineTo(415, 150);
+
+//N
+context.moveTo(440, 200); //start point from bottom
+context.lineTo(440, 100);
+context.lineTo(520, 200);
+context.lineTo(520, 100);
+
+//border
+context.moveTo(0, 0); //start point from bottom
+context.lineTo(600, 0);
+context.lineTo(600, 300);
+context.lineTo(0, 300);
+context.lineTo(0, 0);
+
+context.stroke(); //draw the path
+</script>
+</html>
